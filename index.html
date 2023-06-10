@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Message from Mahesh</title>
+  <style>
+    body {
+      background-color: Pink; /* Set background color */
+      font-family: Arial, sans-serif;
+    }
+    
+    .heart {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: heartbeat 1s infinite;
+      font-size: 4em;
+      color: red;
+    }
+    
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    .hidden {
+      display: none;
+    }
+#messageButton {
+      background-color: yellow; /* Set button color to yellow */
+      color: Green;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="messageButton">Hello , Miss Saloni Sharma,
+   <p>Here is some message for you</p> 
+   <p>[Click Here]</p></button>
+  
+  <div id="messageContainer" class="hidden">
+    <div class="heart">&#10084;</div>
+    
+    <h1>Good morning !! Princess </h1>
+    
+    <p>Dear Garima,</p>
+  
+    <p>I want to sincerely apologize for any mistakes or hurtful actions I may have done. I deeply regret any pain I have caused you and I am truly sorry.</p>
+  
+    <p>I want you to know that I love you more than words can express. You mean the world to me, and I am committed to making things right between us. I promise to always be there for you, to support you, and to love you unconditionally.</p>
+  
+    <p>Your happiness is of utmost importance to me, and I am always here to listen to you. Please know that you can Trust in me anytime, and I will do my best to understand and support you.</p>
+  
+    <p>Once again, I am sorry for any pain I have caused you, and I hope that you can find it in your heart to forgive me. You are the most important person in my life, and I cherish our relationship more than anything.</p>
+  
+    <p>With all my love,</p>
+    <p>Mahesh</p>
+  </div>
+  
+  <script>
+    var messageButton = document.getElementById("messageButton");
+    var messageContainer = document.getElementById("messageContainer");
+    
+    messageButton.addEventListener("click", function() {
+      messageButton.style.display = "none";
+      messageContainer.classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
