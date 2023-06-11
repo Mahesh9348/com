@@ -3,20 +3,22 @@
 <head>
   <title>Message from Mahesh</title>
   <style>
-    
-body {
-      background-color: Pink;
+    /* CSS styles here */
+    body {
+      background-color: #ffdde1;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
     
     .heart {
       position: absolute;
-      top: 85%;
-      left: 1%;
+      top: 138%;
+      left: 26%;
       transform: translate(-50%, -50%);
       animation: heartbeat 1s infinite;
       font-size: 4em;
-      color: red;
+      color: #e74c3c;
     }
     
     @keyframes heartbeat {
@@ -34,23 +36,61 @@ body {
     .hidden {
       display: none;
     }
-#messageButton {
-      background-color: yellow;
-      color: Green;
+    
+    #messageButton {
+      background-color: #f9ca24;
+      color: #2ecc71;
       padding: 10px 20px;
-      font-size: 16px;
+      font-size: 18px;
       border: none;
       cursor: pointer;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    #messageButton:hover {
+      background-color: #f4d03f;
+      color: #27ae60;
+    }
+    
+    #messageContainer {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    
+    @media screen and (max-width: 600px) {
+      #messageContainer {
+        padding: 10px;
+      }
+    }
+    
+    h1 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    
+    p {
+      font-size: 16px;
+      color: #34495e;
+      line-height: 1.6;
+    }
+    
+    .heart-container {
+      position: relative;
     }
   </style>
 </head>
 <body>
-  <button id="messageButton">Hello , Miss Saloni Sharma,
-   <p>Here is some message for you</p> 
-   <p>[Click Here]</p></button>
+  <button id="messageButton">Hello, Miss Saloni Sharma<br>Here is a message for you<br>[Click Here]</button>
   
   <div id="messageContainer" class="hidden">
-    
     <form id="passwordForm">
       <label for="passwordInput">Enter the password to proceed:</label>
       <input type="password" id="passwordInput">
@@ -58,33 +98,32 @@ body {
     </form>
     
     <div id="messageContent" class="hidden">
-    
-    <h1>Good morning !! Princess </h1>
-    
-    <p>Dear Garima,</p>
-  
-    <p>I want to sincerely apologize for any mistakes or hurtful actions I may have done. I deeply regret any pain I have caused you and I am truly sorry.</p>
-  
-    <p>I want you to know that I love you more than words can express. You mean the world to me, and I am committed to making things right between us. I promise to always be there for you, to support you, and to love you unconditionally.</p>
-  
-    <p>Your happiness is of utmost importance to me, and I am always here to listen to you. Please know that you can Trust in me anytime, and I will do my best to understand and support you.</p>
-    
-    <p>Garima,</p>
-    
-    <p>From the moment our paths crossed, you captured my heart and filled my life with joy and happiness. Every day spent with you has been a "Sukkon", and I can't imagine my future without you by my side.</p>
-    
-    <p>With you, Garima, I see a future filled with laughter, love and many more. Together, we will create a home built on trust, understanding, and unconditional love. I want to be there for you, through every milestone, every tear, and every moment of joy. Together, we can create a life built on trust, respect, and a deep connection that knows no bounds.</p>
-    
+      <h1>Good morning, Princess!</h1>
+      
+      <p>Dear Garima,</p>
+      
+      <p>I want to sincerely apologize for any mistakes or hurtful actions I may have done. I deeply regret any pain I have caused you, and I am truly sorry.</p>
+      
+      <p>I want you to know that I love you more than words can express. You mean the world to me, and I am committed to making things right between us. I promise to always be there for you, to support you, and to love you unconditionally.</p>
+      
+      <p>Your happiness is of utmost importance to me, and I am always here to listen to you. Please know that you can trust in me anytime, and I will do my best to understand and support you.</p>
+      
+      <p>Garima,</p>
+      
+      <p>From the moment our paths crossed, you captured my heart and filled my life with joy and happiness. Every day spent with you has been a "Sukkon," and I can't imagine my future without you by my side.</p>
+      
+      <p>With you, Garima, I see a future filled with laughter, love, and many more. Together, we will create a home built on trust, understanding, and unconditional love. I want to be there for you, through every milestone, every tear, and every moment of joy. Together, we can create a life built on trust, respect, and a deep connection that knows no bounds.</p>
+   
     <p>Garima, will you do me the incredible honor of becoming my partner for life? Let us start on a journey together, filled with love, laughter, and endless memories</p>
-    
+   
     <p>Once again, I am sorry for any pain I have caused you,You are the most important person in my life, and I cherish our relationship more than anything.</p>
-  
+ 
     <p>With all my love,</p>
     <p>Mahesh</p>
                                     <div class="heart">&#10084;</div>
     </div>
   </div>
-  
+ 
   <script>
     var messageButton = document.getElementById("messageButton");
     var messageContainer = document.getElementById("messageContainer");
@@ -101,6 +140,7 @@ body {
     submitPassword.addEventListener("click", function() {
       var password = passwordInput.value;
 
+      // Perform password validation here
       if (password === "Garima@2000") {
         passwordForm.style.display = "none";
         messageContent.style.display = "block";
