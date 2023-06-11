@@ -3,15 +3,16 @@
 <head>
   <title>Message from Mahesh</title>
   <style>
-    body {
+    /* CSS styles here */
+body {
       background-color: Pink; /* Set background color */
       font-family: Arial, sans-serif;
     }
     
     .heart {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 85%;
+      left: 1%;
       transform: translate(-50%, -50%);
       animation: heartbeat 1s infinite;
       font-size: 4em;
@@ -49,7 +50,15 @@
    <p>[Click Here]</p></button>
   
   <div id="messageContainer" class="hidden">
-    <div class="heart">&#10084;</div>
+    
+    <form id="passwordForm">
+      <label for="passwordInput">Enter the password to proceed:</label>
+      <input type="password" id="passwordInput">
+      <button type="button" id="submitPassword">Submit</button>
+    </form>
+    
+    <div id="messageContent" class="hidden">
+      <!-- Message content here -->
     
     <h1>Good morning !! Princess </h1>
     
@@ -73,15 +82,33 @@
   
     <p>With all my love,</p>
     <p>Mahesh</p>
+                                    <div class="heart">&#10084;</div>
+    </div>
   </div>
   
   <script>
     var messageButton = document.getElementById("messageButton");
     var messageContainer = document.getElementById("messageContainer");
-    
+    var passwordForm = document.getElementById("passwordForm");
+    var passwordInput = document.getElementById("passwordInput");
+    var submitPassword = document.getElementById("submitPassword");
+    var messageContent = document.getElementById("messageContent");
+
     messageButton.addEventListener("click", function() {
       messageButton.style.display = "none";
-      messageContainer.classList.remove("hidden");
+      messageContainer.style.display = "block";
+    });
+
+    submitPassword.addEventListener("click", function() {
+      var password = passwordInput.value;
+
+      // Perform password validation here
+      if (password === "Garima@2000") {
+        passwordForm.style.display = "none";
+        messageContent.style.display = "block";
+      } else {
+        alert("Invalid password. Please try again.");
+      }
     });
   </script>
 </body>
